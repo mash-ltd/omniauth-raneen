@@ -16,7 +16,7 @@ module OmniAuth
 
       info do
         {
-          :name => [raw_info['first_name'], raw_info['last_name']].join(' '),
+          :name => raw_info['name'],
           :email => raw_info['email']
         }
       end
