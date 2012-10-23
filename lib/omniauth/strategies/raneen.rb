@@ -7,7 +7,7 @@ module OmniAuth
       option :provider_ignores_state, true
 
       option :client_options, {
-        site: 'http://localhost:3000',
+        site: 'http://raneen.tamkeencapital.com',
         token_url: '/oauth/access_token',
         token_method: :get,
       }
