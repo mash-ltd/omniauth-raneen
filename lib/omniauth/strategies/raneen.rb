@@ -1,35 +1,47 @@
 require 'omniauth/strategies/oauth2'
+# require_relative '../../omniauth-raneen'
+# require 'omniauth-raneen'
+# require 'omniauth/raneen'
 
-module OmniAuth
-  module Strategies
-    class Raneen < OmniAuth::Strategies::OAuth2
-      option :name, 'raneen'
-      option :provider_ignores_state, true
+module Omniauth
+  module Raneen
+    module Strategies
+      
+      # attr_reader :site
+      # debugger
+      # @@site = ::Omniauth::Raneen.configuration.oauth_callback_url
 
-      option :client_options, {
-        site: 'http://raneen.tamkeencapital.com',
-        token_url: '/oauth/access_token',
-        token_method: :get,
-      }
 
-      uid{ raw_info['id'] }
+      class Raneen < OmniAuth::Strategies::OAuth2
+        option :name, 'raneen'
+        option :provider_ignores_state, true
 
-      info do
-        {
-          :name => raw_info['name'],
-          :email => raw_info['email'],
-          :entity_type => raw_info['entity_type'],
+        option :client_options, {
+          site: Omniauth::Raneen::Configuration.instance.oauth_callback_url,
+          # site: "http://raneen.tamkeencapital.com",
+          token_url: '/oauth/access_token',
+          token_method: :get,
         }
-      end
 
-      extra do
-        {
-          'raw_info' => raw_info
-        }
-      end
+        uid{ raw_info['id'] }
 
-      def raw_info
-        @raw_info ||= access_token.get('/api/v1/users/index').parsed
+        info do
+          {
+            :name => raw_info['name'],
+            :email => raw_info['email'],
+            :entity_type => raw_info['entity_type'],
+          }
+        end
+
+        extra do
+          {
+            'raw_info' => raw_info
+          }
+        end
+
+        def raw_info
+          @raw_info ||= access_token.get('/api/v1/users/index').parsed
+        end
       end
     end
   end

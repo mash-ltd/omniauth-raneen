@@ -6,8 +6,8 @@ require 'omniauth/raneen/version'
 Gem::Specification.new do |gem|
   gem.name          = "omniauth-raneen"
   gem.version       = Omniauth::Raneen::VERSION
-  gem.authors       = ["Ahmad Sherif"]
-  gem.email         = ["ahmad.sherif@mashsolvents.com"]
+  gem.authors       = ["Ahmad Sherif", "Rana Ramez"]
+  gem.email         = ["ahmad.sherif@mashsolvents.com", "rana.ramez@mashsolvents.com"]
   gem.summary       = %q{An OmniAuth strategy for Raneen}
   gem.homepage      = "http://www.mashsolvents.com"
 
@@ -17,4 +17,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_runtime_dependency 'omniauth-oauth2', '~> 1.1'
+  gem.add_dependency 'devise', '~> 2.1.0'
 end
