@@ -1,17 +1,9 @@
 require 'omniauth/strategies/oauth2'
-# require_relative '../../omniauth-raneen'
-# require 'omniauth-raneen'
-# require 'omniauth/raneen'
 
 module Omniauth
   module Raneen
     module Strategies
       
-      # attr_reader :site
-      # debugger
-      # @@site = ::Omniauth::Raneen.configuration.oauth_callback_url
-
-
       class Raneen < OmniAuth::Strategies::OAuth2
         option :name, 'raneen'
         option :provider_ignores_state, true
