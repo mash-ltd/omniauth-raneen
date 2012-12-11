@@ -18,7 +18,6 @@ module Omniauth
 
         option :client_options, {
           site: Omniauth::Raneen::Configuration.instance.oauth_callback_url,
-          # site: "http://raneen.tamkeencapital.com",
           token_url: '/oauth/access_token',
           token_method: :get,
         }

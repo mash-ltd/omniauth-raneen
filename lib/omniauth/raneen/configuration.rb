@@ -9,7 +9,7 @@ module Omniauth
       attr_accessor :app_secret, :app_id, :oauth_callback_url
 
       def initialize
-        parse_config_file "#{Rails.root}/config/omniauth-raneen.yml"
+        parse_config_file "config/omniauth-raneen.yml"
         @app_id ||= nil
         @app_secret ||= nil
         @oauth_callback_url ||= "http://raneen.tamkeencapital.com"
