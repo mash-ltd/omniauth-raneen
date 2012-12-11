@@ -2,7 +2,7 @@ require_relative 'raneen/version'
 require "rails"
 require_relative 'raneen/configuration'
 require_relative 'raneen/railtie'
-require_relative '../generators/omniauth-raneen/install_generator'
+# require_relative '../generators/omniauth-raneen/install_generator'
 
 module Omniauth
   module Raneen
