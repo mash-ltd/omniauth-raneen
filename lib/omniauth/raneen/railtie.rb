@@ -1,5 +1,4 @@
 require "omniauth-raneen"
-# require "rails"
 
 module Omniauth
   module Raneen
