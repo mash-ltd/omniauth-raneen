@@ -1,6 +1,9 @@
+scope: &scope
+  scope: "get_profile_info"
+
 defaults: &defaults
-  api_key: YOUR_LOCAL_API_KEY
-  api_secret: YOUR_LOCAL_API_SECRET
+  app_id: YOUR_LOCAL_API_KEY
+  app_secret: YOUR_LOCAL_API_SECRET
   oauth_callback_url: "http://localhost:3000"
 
 development:
@@ -10,5 +13,6 @@ test: &test
   <<: *defaults
 
 production:
-  api_key: DEPLOY_API_KEY
-  api_secret: DEPLOY_API_SECRET
+  <<: *scope
+  app_id: DEPLOY_API_KEY
+  app_secret: DEPLOY_API_SECRET
