@@ -1,6 +1,7 @@
 defaults: &defaults
-  api_key: YOUR_API_KEY
-  api_secret: YOUR_API_SECRET
+  api_key: YOUR_LOCAL_API_KEY
+  api_secret: YOUR_LOCAL_API_SECRET
+  oauth_callback_url: "http://localhost:3000"
 
 development:
   <<: *defaults
@@ -9,5 +10,5 @@ test: &test
   <<: *defaults
 
 production:
-  <<: *defaults
-  oauth_callback_url: "http://raneen.tamkeencapital.com"
+  api_key: DEPLOY_API_KEY
+  api_secret: DEPLOY_API_SECRET

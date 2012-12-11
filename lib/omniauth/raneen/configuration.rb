@@ -12,7 +12,7 @@ module Omniauth
         parse_config_file "#{Rails.root}/config/omniauth-raneen.yml"
         @app_id ||= nil
         @app_secret ||= nil
-        @oauth_callback_url ||= "http://localhost:3000"
+        @oauth_callback_url ||= "http://raneen.tamkeencapital.com"
       end
 
       # Loads the configuration file
