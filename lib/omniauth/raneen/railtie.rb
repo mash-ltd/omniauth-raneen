@@ -8,7 +8,7 @@ module Omniauth
         class Railtie < Rails::Railtie
 
           initializer :load_raneen_omniauth_config do 
-            ::Omniauth::Raneen::Configuration.instance.setup_omniauth_client
+            ::Omniauth::Raneen::Configuration.instance
           end
         end
       end

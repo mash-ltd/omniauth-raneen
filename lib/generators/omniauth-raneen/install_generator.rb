@@ -31,9 +31,9 @@ module Omniauth
           end
         end
 
-        def show_readme
-          readme "README" if behavior == :invoke
-        end
+        # def show_readme
+        #   readme "README" if behavior == :invoke
+        # end
 
       end
     end
