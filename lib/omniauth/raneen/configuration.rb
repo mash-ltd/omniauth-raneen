@@ -19,7 +19,6 @@ module Omniauth
       # Loads the configuration file
       # @return [nil]
       def parse_config_file(path)
-        require 'ruby-debug'; debugger
         return unless File.exists?(path)
         
         conf = YAML::load(ERB.new(IO.read(path)).result)[Rails.env]
