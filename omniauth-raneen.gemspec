@@ -17,5 +17,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_runtime_dependency 'omniauth-oauth2', '~> 1.1'
-  gem.add_dependency 'devise', '~> 2.1.0'
+  gem.add_dependency 'devise', '~> 2.2.3'
 end
